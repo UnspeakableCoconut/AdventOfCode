@@ -58,6 +58,29 @@ namespace AdventOfCode
         {
             return Regex.Replace(input, pattern, replacement);
         }
+
+        public static List<List<string>> Permute(this string[] original, List<List<string>> list, int start = 0, int end = -1)
+        {
+            if (end == -1) end = original.Length - 1;
+            if (start == end) list.Add(new List<string>(original));
+            else
+            {
+                for (int i = start; i <= end; i++)
+                {
+                    Swap(ref original[start], ref original[i]);
+                    Permute(original, list, start + 1, end);
+                    Swap(ref original[start], ref original[i]);
+                }
+            }
+            return list;
+        }
+
+        static void Swap(ref string a, ref string b)
+        {
+            var temp = a;
+            a = b;
+            b = temp;
+        }
     }
 }
 

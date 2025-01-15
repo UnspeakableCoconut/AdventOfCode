@@ -55,6 +55,7 @@ namespace AoC2015
             return locs.Distinct().ToArray();
         }
 
+        // and suddenly, on day 13, this permutation method becomes useful again
         static List<List<string>> PermuteLocs(string[] locs, int start, int end, List<List<string>> list)
         {
             if (start == end) list.Add(new List<string>(locs));

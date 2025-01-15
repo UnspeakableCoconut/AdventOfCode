@@ -1,7 +1,4 @@
 ﻿using AdventOfCode;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Text.RegularExpressions;
 
 namespace AoC2015
 {
@@ -25,7 +22,6 @@ namespace AoC2015
         static int PartTwo(string input)
         {
             input = input.ExtractAll(@"\{|\[|\-?\d+|red|\}|\]").Concat(" "); // remove unnecessary characters, keep {, [, -, 0-9, red, ], }
-            Console.WriteLine(input);
             while (input.Extract(@"\{|\[") != "")
             {
                 string[] extractions = input.ExtractAll(@"\[[\-\dred ]*\]|\{[\-\dred ]*\}");
@@ -41,7 +37,7 @@ namespace AoC2015
             {
                 char first = ext[0];
                 if (first == '{' && ext.Contains("red")) input = input.Replace(ext, " "); // remove objects that have "red" in them
-                else if (first == '[' && ext.Contains("red")) // arrays with "red" can stay (remove "red" so it doesn't accidentally remove an object later
+                else if (first == '[' && ext.Contains("red")) // arrays with "red" can stay (remove "red" so it doesn't accidentally remove an object later)
                 {
                     rplcmnt = ext.Replace("red", " ");
                     input = input.Replace(ext, rplcmnt);

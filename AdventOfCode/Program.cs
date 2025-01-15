@@ -4,7 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            AoC2015.Day12.Run();
+            AoC2015.Day13.Run();
             //All.Run();
             //RunAll();
         }

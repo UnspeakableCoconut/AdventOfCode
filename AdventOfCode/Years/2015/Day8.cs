@@ -37,7 +37,9 @@ namespace AoC2015
             return result;
         }
 
-        static int ParScape(string line)
+        // why did I name it this way? it should be called "ParseEscapes". real "legendHandles" => "legHands" => "feet" situation.
+        // "sometimes I tryly hate my past self"
+        static int ParScape(string line) 
         {
             int escaped = 2;
             foreach (char c in line) escaped += ((int)c == 92 || (int)c == 34) ? 1 : 0;

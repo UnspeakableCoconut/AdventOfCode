@@ -16,7 +16,7 @@
             AoC2015.Day10.Run();
             AoC2015.Day11.Run();
             AoC2015.Day12.Run();
-            //AoC2015.Day13.Run();
+            AoC2015.Day13.Run();
             //AoC2015.Day14.Run();
             //AoC2015.Day15.Run();
             //AoC2015.Day16.Run();
