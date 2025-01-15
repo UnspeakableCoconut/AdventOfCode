@@ -13,12 +13,7 @@ namespace AdventOfCode
 
     public static class AOCExtensions
     {
-        public static void Message(this int result, int part = 1)
-        {
-            result.ToString().Message(part);
-        }
-
-        public static void Message(this string result, int part = 1)
+        public static void Message(this object result, int part = 1)
         {
             string num = part == 1 ? "One" : "Two";
             Console.WriteLine($"Part {num}: {result}");
@@ -57,6 +52,11 @@ namespace AdventOfCode
         public static string Concat(this string[] arr, string separator = "")
         {
             return string.Join(separator, arr);
+        }
+
+        public static string ReplaceRegex(this string input, string pattern, string replacement)
+        {
+            return Regex.Replace(input, pattern, replacement);
         }
     }
 }
