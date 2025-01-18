@@ -13,20 +13,22 @@ namespace AoC2015
             string[] input = Setup.GetInput(yr, day);
             Console.WriteLine($"{yr} Day {day}:");
             PartOne(input).Message(1);
-            PartTwo(input).Message(2);
+            PartTwo().Message(2);
         }
 
         static int PartOne(string[] input)
         {
             reindeer = LoadReindeer(input);
-            int maxDist = 0;
-            foreach (RacingReindeer r in reindeer)
-            {
-                int distance = GetDistance(r.Speed, r.FlightTime, r.RestTime);
-                if (maxDist > distance) continue;
-                maxDist = distance;
+            for (int i = 1; i <= 2503; i++) // not the usual i = 0; i < # because UpdateDistance(i) depends on starting at 1.
+            {                               // yes, I could have done UpdateDistance(i + 1)
+                UpdateDistances(i);
+                UpdatePoints();
             }
-            return maxDist;
+            return GetMaxDist();
+        }
+        static int PartTwo()
+        {
+            return reindeer.Select(r => r.Points).ToArray().Max();
         }
 
         static List<RacingReindeer> LoadReindeer(string[] input)
@@ -40,34 +42,6 @@ namespace AoC2015
                 reindeer.Add(new RacingReindeer(speeds[i], flightTimes[i], restTimes[i]));
 
             return reindeer;
-        }
-
-        static int GetDistance(int speed, int flightTime, int restTime)
-        {
-            int fullTime = flightTime + restTime,
-                fullTurns = 2503 / fullTime,
-                secondsLeft = 2503 % fullTime;
-
-            if (secondsLeft > flightTime) secondsLeft = flightTime;
-
-            int fullTurnDist = (speed * flightTime * fullTurns),
-                partialTurnDist = (speed * secondsLeft);
-
-            return fullTurnDist + partialTurnDist;
-        }
-
-        static int PartTwo(string[] input)
-        {
-            for (int i = 1; i <= 2503; i++)
-            {
-                UpdateDistances(i);
-                UpdatePoints();
-            }
-            int maxPoints = 0;
-            foreach (RacingReindeer r in reindeer) 
-                maxPoints = maxPoints < r.Points ? r.Points : maxPoints;
-                
-            return maxPoints;
         }
 
         static void UpdateDistances(int time)
