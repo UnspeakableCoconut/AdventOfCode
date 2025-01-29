@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace AoC2015
 {
-    public class Day7
+    public class Day07
     {
         private static Dictionary<string, int?> wires = [];
         private static Dictionary<string, string> ops = [];

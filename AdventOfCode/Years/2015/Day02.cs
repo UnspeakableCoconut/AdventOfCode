@@ -2,7 +2,7 @@
 
 namespace AoC2015
 {
-    public class Day2
+    public class Day02
     {
         public static void Run()
         {

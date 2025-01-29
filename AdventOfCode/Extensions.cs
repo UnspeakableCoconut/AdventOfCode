@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using AoC2015;
+using System.Text.RegularExpressions;
 
 namespace AdventOfCode
 {
@@ -6,7 +7,8 @@ namespace AdventOfCode
     {
         public static string[] GetInput(int yr, int day)
         {
-            string path = $"C:/Users/{Environment.UserName}/source/repos/AdventOfCode/AdventOfCode/Years/{yr}/Inputs/day{day}.txt";
+            string sDay = day < 10 ? "0" + day : day.ToString(),
+                path = $"C:/Users/{Environment.UserName}/source/repos/AdventOfCode/AdventOfCode/Years/{yr}/Inputs/day{sDay}.txt";
             return File.ReadAllLines(path);
         }
     }

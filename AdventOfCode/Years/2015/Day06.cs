@@ -2,7 +2,7 @@
 
 namespace AoC2015
 {
-    public class Day6
+    public class Day06
     {
         public static Dictionary<string, bool> boolLights = [];
         public static Dictionary<string, int> intLights = [];

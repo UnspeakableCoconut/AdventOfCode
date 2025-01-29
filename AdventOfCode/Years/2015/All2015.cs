@@ -4,24 +4,24 @@
     {
         public static void Run()
         {
-            AoC2015.Day1.Run();
-            AoC2015.Day2.Run();
-            AoC2015.Day3.Run();
-            AoC2015.Day4.Run();
-            AoC2015.Day5.Run();
-            AoC2015.Day6.Run();
-            AoC2015.Day7.Run();
-            AoC2015.Day8.Run();
-            AoC2015.Day9.Run();
+            AoC2015.Day01.Run();
+            AoC2015.Day02.Run();
+            AoC2015.Day03.Run();
+            AoC2015.Day04.Run();
+            AoC2015.Day05.Run();
+            AoC2015.Day06.Run();
+            AoC2015.Day07.Run();
+            AoC2015.Day08.Run();
+            AoC2015.Day09.Run();
             AoC2015.Day10.Run();
             AoC2015.Day11.Run();
             AoC2015.Day12.Run();
             AoC2015.Day13.Run();
-            //AoC2015.Day14.Run();
-            //AoC2015.Day15.Run();
-            //AoC2015.Day16.Run();
-            //AoC2015.Day17.Run();
-            //AoC2015.Day18.Run();
+            AoC2015.Day14.Run();
+            AoC2015.Day15.Run();
+            AoC2015.Day16.Run();
+            AoC2015.Day17.Run();
+            AoC2015.Day18.Run();
             //AoC2015.Day19.Run();
             //AoC2015.Day20.Run();
             //AoC2015.Day21.Run();

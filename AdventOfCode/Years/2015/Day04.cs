@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AoC2015
 {
-    public class Day4
+    public class Day04
     {
         public static void Run()
         {

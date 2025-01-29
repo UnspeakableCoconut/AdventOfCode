@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace AoC2015
 {
-    public class Day8
+    public class Day08
     {
         public static void Run()
         {

@@ -2,7 +2,7 @@
 
 namespace AoC2015
 {
-    public class Day9
+    public class Day09
     {
         public static Dictionary<string, int> distances = [];
         public static List<int> dists = [];

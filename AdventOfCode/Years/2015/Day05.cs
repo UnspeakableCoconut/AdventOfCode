@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace AoC2015
 {
-    public class Day5
+    public class Day05
     {
         public static void Run()
         {
