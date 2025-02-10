@@ -32,7 +32,7 @@ namespace AoC2015
                 sign = line.Extract("gain") == "" ? "-" : "";
                 num = line.Extract(@"\d+");
                 int score = (sign + num).ToInt();
-                people = line.ExtractAll(@"^[^ ]*|[^ ]*\.").Concat(",").Replace(".", "");
+                people = line.ExtractAll(@"^[^ ]*|[^ ]*\.").Conjoin(",").Replace(".", "");
                 happyScores.Add(people, score);
             }
         }
@@ -51,7 +51,7 @@ namespace AoC2015
             for (int i = 0; i < permutation.Count - 1; i++)
             {
                 string[] guests = [permutation[i], permutation[i + 1]];
-                pairs.Add(guests.Concat(","));
+                pairs.Add(guests.Conjoin(","));
                 pairs.Add($"{guests[1]},{guests[0]}");
             }
             int lastIndex = permutation.Count - 1;

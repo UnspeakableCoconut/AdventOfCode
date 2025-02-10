@@ -29,7 +29,7 @@ namespace AoC2015
                 .Cast<Capture>()
                 .Select(v => v.Value)
                 .Select(c => c.Length + c.Substring(0, 1))
-                .ToArray().Concat();
+                .ToArray().Conjoin();
         }
 
         static int PartTwo(string input)

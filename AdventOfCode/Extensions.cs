@@ -22,6 +22,11 @@ namespace AdventOfCode
             if (part == 2) Console.WriteLine();
         }
 
+        public static void Write(this object obj)
+        {
+            Console.WriteLine(obj);
+        }
+
         public static string Extract(this string s, string regex)
         {
             return Regex.Match(s, regex).Value;
@@ -51,9 +56,14 @@ namespace AdventOfCode
             return int.Parse(s);
         }
 
-        public static string Concat(this string[] arr, string separator = "")
+        public static string Conjoin(this string[] arr, string separator = "")
         {
             return string.Join(separator, arr);
+        }
+
+        public static string Conjoin<TSource>(this IEnumerable<TSource> source, string separator = "")
+        {
+            return string.Join(separator, source);
         }
 
         public static string ReplaceRegex(this string input, string pattern, string replacement)

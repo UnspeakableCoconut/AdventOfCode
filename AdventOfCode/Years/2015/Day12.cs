@@ -21,7 +21,7 @@ namespace AoC2015
 
         static int PartTwo(string input)
         {
-            input = input.ExtractAll(@"\{|\[|\-?\d+|red|\}|\]").Concat(" "); // remove unnecessary characters, keep {, [, -, 0-9, red, ], }
+            input = input.ExtractAll(@"\{|\[|\-?\d+|red|\}|\]").Conjoin(" "); // remove unnecessary characters, keep {, [, -, 0-9, red, ], }
             while (input.Extract(@"\{|\[") != "")
             {
                 string[] extractions = input.ExtractAll(@"\[[\-\dred ]*\]|\{[\-\dred ]*\}");
