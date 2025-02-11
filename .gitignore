@@ -9,6 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+**/Inputs
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -361,3 +362,27 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/AdventOfCode/Years/2016/Inputs/day04.txt
+/AdventOfCode/Years/2016/Inputs/day03.txt
+/AdventOfCode/Years/2016/Inputs/day02.txt
+/AdventOfCode/Years/2016/Inputs/day01.txt
+/AdventOfCode/Years/2015/Inputs/day01.txt
+/AdventOfCode/Years/2015/Inputs/day02.txt
+/AdventOfCode/Years/2015/Inputs/day03.txt
+/AdventOfCode/Years/2015/Inputs/day04.txt
+/AdventOfCode/Years/2015/Inputs/day05.txt
+/AdventOfCode/Years/2015/Inputs/day06.txt
+/AdventOfCode/Years/2015/Inputs/day07.txt
+/AdventOfCode/Years/2015/Inputs/day08.txt
+/AdventOfCode/Years/2015/Inputs/day09.txt
+/AdventOfCode/Years/2015/Inputs/day10.txt
+/AdventOfCode/Years/2015/Inputs/day11.txt
+/AdventOfCode/Years/2015/Inputs/day12.txt
+/AdventOfCode/Years/2015/Inputs/day13.txt
+/AdventOfCode/Years/2015/Inputs/day14.txt
+/AdventOfCode/Years/2015/Inputs/day15.txt
+/AdventOfCode/Years/2015/Inputs/day16.txt
+/AdventOfCode/Years/2015/Inputs/day17.txt
+/AdventOfCode/Years/2015/Inputs/day18.txt
+/AdventOfCode/Years/2015/Inputs/day19.txt
+/AdventOfCode/Years/2015/Inputs/day20.txt
