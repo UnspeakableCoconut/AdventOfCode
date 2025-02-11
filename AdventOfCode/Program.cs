@@ -5,7 +5,7 @@
         public static void Main(string[] args)
         {
             // AoC2015.Day18.Run(); // yep. that's as far as I got on 2015. for now.
-            AoC2016.Day04.Run();
+            AoC2016.Day05.Run();
             //RunAll();
         }
 

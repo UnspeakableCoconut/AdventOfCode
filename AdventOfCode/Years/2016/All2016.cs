@@ -7,7 +7,7 @@
             AoC2016.Day01.Run();
             AoC2016.Day02.Run();
             AoC2016.Day03.Run();
-            //AoC2016.Day04.Run();
+            AoC2016.Day04.Run();
             //AoC2016.Day05.Run();
             //AoC2016.Day06.Run();
             //AoC2016.Day07.Run();
