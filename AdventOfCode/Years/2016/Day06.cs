@@ -4,7 +4,7 @@ namespace AoC2016
 {
     public class Day06
     {
-        private static List<string> columns = [];
+        private static readonly List<string> columns = [];
 
         public static void Run()
         {
@@ -22,8 +22,7 @@ namespace AoC2016
             return columns.Select(
                 col => col.ToCharArray().Distinct()
                 .Select(c => new { Key = c, Value = col.ReplaceRegex($"[^{c}]*", "").Length })
-                .OrderByDescending(c => c.Value)
-                .Take(1).Select(c => c.Key).Conjoin()
+                .OrderByDescending(c => c.Value).Take(1).Select(c => c.Key).Conjoin()
                 ).Conjoin();
         }
 
@@ -32,8 +31,7 @@ namespace AoC2016
             return columns.Select(
                 col => col.ToCharArray().Distinct()
                 .Select(c => new { Key = c, Value = col.ReplaceRegex($"[^{c}]*", "").Length })
-                .OrderBy(c => c.Value)
-                .Take(1).Select(col => col.Key).Conjoin()
+                .OrderBy(c => c.Value).Take(1).Select(col => col.Key).Conjoin()
                 ).Conjoin();
         }
 
