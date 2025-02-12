@@ -32,11 +32,10 @@ namespace AoC2016
                 secondRegex = sslRegex.Values.Conjoin("|"),
                 squareRegex = @"\[[^\]]*\]";
 
-            KeyValuePair<string, string>[] lines = input.Select(line => new { 
-                Key = line.ReplaceRegex(squareRegex, " "), 
-                Value = line.ExtractAll(squareRegex).Conjoin(" ") 
-            }).Select(o => new KeyValuePair<string, string>(o.Key, o.Value))
-            .ToArray();
+            KeyValuePair<string, string>[] lines = input.Select(line => new KeyValuePair<string, string>(
+                line.ReplaceRegex(squareRegex, ""), 
+                line.ExtractAll(squareRegex).Conjoin(" ")
+                )).ToArray();
 
             List<string> matchedKeys = [];
             foreach (string regex in sslRegex.Keys)
